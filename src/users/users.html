@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jfoenix@9.0.10/css/jfoenix-main.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jfoenix@9.0.10/css/jfoenix-design.css" />
+  <style>
+    #AnchorPane {
+      -fx-pref-height: 620.0;
+      -fx-pref-width: 690.0;
+      -fx-background-color: #F2F2F2;
+    }
+
+    .pane-style {
+      -fx-pref-height: 152.0;
+      -fx-pref-width: 690.0;
+      -fx-background-color: #bababa;
+      -fx-effect: dropshadow(5, black);
+    }
+
+    .image-view-logo-style {
+      -fx-fit-height: 116.0;
+      -fx-fit-width: 312.0;
+      -fx-layout-x: 288.0;
+      -fx-layout-y: 7.0;
+      -fx-pick-on-bounds: true;
+      -fx-preserve-ratio: true;
+    }
+
+    .image-view-key-style {
+      -fx-fit-height: 36.0;
+      -fx-fit-width: 42.0;
+      -fx-layout-x: 286.0;
+      -fx-layout-y: 517.0;
+      -fx-pick-on-bounds: true;
+      -fx-preserve-ratio: true;
+      -fx-cursor: hand;
+    }
+
+    .vbox-style {
+      -fx-layout-x: 22.0;
+      -fx-layout-y: 154.0;
+      -fx-pref-height: 463.0;
+      -fx-pref-width: 647.0;
+    }
+
+    .hbox-style {
+      -fx-alignment: center;
+      -fx-pref-height: 238.0;
+      -fx-pref-width: 666.0;
+      -fx-spacing: 20.0;
+    }
+
+    .button-style {
+      -fx-alignment: center;
+      -fx-button-type: raised;
+      -fx-content-display: top;
+      -fx-pref-height: 171.0;
+      -fx-pref-width: 206.0;
+      -fx-background-color: #93bdbb;
+      -fx-border-width: 3;
+      -fx-border-color: #fff;
+      -fx-cursor: hand;
+    }
+
+    .image-view-button-style {
+      -fx-fit-height: 150.0;
+      -fx-fit-width: 200.0;
+      -fx-pick-on-bounds: true;
+      -fx-preserve-ratio: true;
+    }
+
+    .font-style {
+      -fx-font: 19.0 System Bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="AnchorPane">
+    <div class="pane-style">
+      <img class="image-view-logo-style" src="../homepage/tamu-days.png" alt="Tamu Days" />
+    </div>
+    <img class="image-view-key-style" src="../img/key.png" alt="Key" onclick="NewUserAction()" />
+
+    <div class="vbox-style">
+      <div class="hbox-style">
+        <button class="button-style" onclick="AddUser()">
+          <img class="image-view-button-style" src="../img/AddUser.png" alt="Add User" />
+          <div class="font-style">Add User</div>
+        </button>
+
+        <button class="button-style" onclick="DeleteUser()">
+          <img class="image-view-button-style" src="../img/DeleteUser.png" alt="Delete User" />
+          <div class="font-style">Delete User</div>
+        </button>
+      </div>
+
+      <div class="hbox-style">
+        <button class="button-style" onclick="ViewUsers()">
+          <img class="image-view-button-style" src="../img/ViewUsers.png" alt="View All Users" />
+          <div class="font-style">View All Users</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

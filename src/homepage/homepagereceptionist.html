@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    #AnchorPane {
+      -fx-pref-height: 956.0;
+    }
+    
+    .pane-style {
+      -fx-background-color: #f0f0f0;
+      -fx-border-width: 2;
+      -fx-border-color: #1e2b3c;
+      -fx-pref-height: 781.0;
+      -fx-pref-width: 233.0;
+    }
+    
+    .vbox-style {
+      -fx-layout-x: 12.0;
+      -fx-layout-y: 18.0;
+      -fx-pref-height: 641.0;
+      -fx-pref-width: 211.0;
+      -fx-spacing: 50.0;
+    }
+    
+    .grid-pane-style {
+      -fx-pref-height: 128.0;
+      -fx-pref-width: 239.0;
+      -fx-background-color: #93bdbb;
+      -fx-border-width: 3;
+      -fx-border-color: #1e2b3c;
+    }
+    
+    .label-style {
+      -fx-alignment: center;
+      -fx-text-fill: #1e2b3c;
+      -fx-font: 18.0 Comic Sans MS Bold;
+    }
+    
+    .progress-indicator-style {
+      -fx-pref-height: 128.0;
+      -fx-pref-width: 185.0;
+    }
+    
+    .label-background-style {
+      -fx-background-color: #c3e6e4;
+      -fx-border-width: 2;
+      -fx-border-color: #1e2b3c;
+      -fx-alignment: center;
+      -fx-text-fill: #1e2b3c;
+      -fx-font: 17.0 Comic Sans MS Bold;
+    }
+    
+    .button-style {
+      -fx-layout-x: 16.0;
+      -fx-layout-y: 687.0;
+      -fx-pref-height: 61.0;
+      -fx-pref-width: 203.0;
+      -fx-text-fill: #1e2b3c;
+      -fx-font: 25.0 Comic Sans MS Bold;
+    }
+    
+    .grid-pane-main {
+      -fx-alignment: center;
+      -fx-hgap: 50.0;
+      -fx-layout-x: 253.0;
+      -fx-layout-y: 213.0;
+      -fx-pref-height: 737.0;
+      -fx-pref-width: 1127.0;
+      -fx-vgap: 10.0;
+    }
+    
+    .button-main {
+      -fx-button-type: raised;
+      -fx-content-display: top;
+      -fx-pref-height: 259.0;
+      -fx-pref-width: 361.0;
+      -fx-rippler-fill: black;
+      -fx-background-color: #93bdbb;
+      -fx-text-alignment: center;
+      -fx-font: 43.0 Comic Sans MS Bold;
+    }
+    
+    .image-view-style {
+      -fx-fit-height: 102.0;
+      -fx-fit-width: 129.0;
+      -fx-pick-on-bounds: true;
+      -fx-preserve-ratio: true;
+    }
+    
+    .pane-bottom {
+      -fx-pref-height: 175.0;
+      -fx-pref-width: 1400.0;
+      -fx-background-color: #bababa;
+    }
+    
+    .image-view-bottom {
+      -fx-fit-height: 146.0;
+      -fx-fit-width: 348.0;
+      -fx-layout-x: 21.0;
+      -fx-layout-y: 8.0;
+      -fx-pick-on-bounds: true;
+      -fx-preserve-ratio: true;
+    }
+    
+    .rectangle-style {
+      -fx-arc-height: 5.0;
+      -fx-arc-width: 5.0;
+      -fx-fill: #707070;
+      -fx-height: 100.0;
+      -fx-layout-x: 499.0;
+      -fx-layout-y: 111.0;
+      -fx-stroke: #1e2b3c;
+      -fx-stroke-type: outside;
+      -fx-stroke-width: 5.0;
+      -fx-width: 413.0;
+    }
+    
+    .label-title-style {
+      -fx-layout-x: 564.0;
+      -fx-layout-y: 123.0;
+      -fx-text-fill: white;
+      -fx-font: 57.0 Comic Sans MS Bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="AnchorPane">
+    <div class="pane-style">
+      <div class="vbox-style">
+        <div class="grid-pane-style">
+          <label class="label-style" id="usernameLabel11" text="Name:" />
+          <label class="label-style" id="usernameLabel1" text="Abdelrahman" />
+          <label class="label-style" id="usernameLabel111" text="Role:" />
+          <label class="label-style" id="rank_Label" text="Receptionist" />
+        </div>
+        <div class="grid-pane-style">
+          <progress class="progress-indicator-style" id="available_par" progress="0.78"></progress>
+          <label class="label-background-style" text="Available Rooms" />
+        </div>
+        <div class="grid-pane-style">
+          <progress class="progress-indicator-style" id="reserved_par" progress="0.22"></progress>
+          <label class="label-background-style" text="Reserved Rooms" />
+        </div>
+      </div>
+      <button class="button-style" id="logout" onclick="logout()">Log Out</button>
+    </div>
+    <div class="grid-pane-main">
+      <button class="button-main" id="room_booking_Buttton" onclick="bookRoom()">
+        Room Booking
+        <img class="image-view-style" src="../img/roomBooking.png" alt="Room Booking" />
+      </button>
+      <button class="button-main" id="cancel_booking_Buttton" onclick="cancelBooking()">
+        Cancel Booking
+        <img class="image-view-style" src="../img/cancelBookingicon.png" alt="Cancel Booking" />
+      </button>
+      <button class="button-main" id="check_out_Buttton" onclick="checkoutBookings()">
+        Check Out
+        <img class="image-view-style" src="../img/checkout1.png" alt="Check Out" />
+      </button>
+      <button class="button-main" id="guestsBTN" onclick="viewGuests()">
+        Guests
+        <img class="image-view-style" src="../img/guests.png" alt="Guests" />
+      </button>
+    </div>
+    <div class="pane-bottom">
+      <img class="image-view-bottom" src="../homepage/tamu-days.png" alt="Tamu Days" />
+      <div class="rectangle-style"></div>
+      <label class="label-title-style">Home Page</label>
+    </div>
+  </div>
+
+</body>
+
+</html>

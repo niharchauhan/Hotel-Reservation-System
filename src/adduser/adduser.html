@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'System Bold', sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        #AnchorPane {
+            position: relative;
+            height: 620px;
+            width: 690px;
+            background-color: #F2F2F2;
+        }
+
+        #Pane1, #Pane2 {
+            border-width: 5px;
+            background-color: #fff;
+            border-color: #1e2b3c;
+            margin: 20px;
+            position: relative;
+        }
+
+        #Pane1 {
+            height: 159px;
+        }
+
+        #Pane2 {
+            height: 265px;
+        }
+
+        #ButtonLogin {
+            position: absolute;
+            bottom: 20px;
+            left: 264px;
+            width: 163px;
+            height: 61px;
+            background-color: #000000;
+            border-color: transparent;
+            border-width: 3px;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        #FontAwesomeIconView1 {
+            fill: #1e2b3c;
+            position: absolute;
+            top: 288px;
+            left: 62px;
+            size: 45px;
+        }
+
+        #FontAwesomeIconView2 {
+            fill: #1e2b3c;
+            position: absolute;
+            top: 370px;
+            left: 62px;
+            size: 35px;
+        }
+
+        #HBox1 {
+            position: absolute;
+            bottom: 60px;
+            left: 233px;
+        }
+
+        #isAdminButton {
+            background-color: #95ccff;
+            border-color: #b2e0ff;
+            color: #1e2b3c;
+            text-align: center;
+            font-size: 21px;
+        }
+
+        #Pane3 {
+            height: 149px;
+            background-color: #bababa;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #ImageView1 {
+            width: 312px;
+            height: 116px;
+            position: absolute;
+            top: 7px;
+            left: 288px;
+        }
+
+        #Pane4 {
+            height: 32px;
+            width: 254px;
+            position: absolute;
+            top: 3px;
+            left: 5px;
+        }
+
+        #FontAwesomeIconView3 {
+            fill: white;
+            position: absolute;
+            top: 23px;
+            left: 5px;
+            size: 10px;
+            cursor: pointer;
+        }
+
+        #Label1 {
+            color: white;
+            position: absolute;
+            top: 1px;
+            left: 15px;
+            font-size: 23px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="AnchorPane">
+        <div id="Pane1">
+            <input type="text" id="UserNameField" placeholder="Enter new username" style="focusColor: #1e2b3c; labelFloat: true; unFocusColor: #1e2b3c;">
+            <input type="password" id="PasswordField" placeholder="Enter new password" style="focusColor: #1e2b3c; labelFloat: true; unFocusColor: #1e2b3c;">
+        </div>
+
+        <button id="ButtonLogin" onclick="NewUserAction()">ADD</button>
+
+        <div id="FontAwesomeIconView1">USER</div>
+        <div id="FontAwesomeIconView2">KEY</div>
+
+        <div id="HBox1">
+            <input type="checkbox" id="isAdminButton" onclick="isAdminButtonAction()">Receptionist
+        </div>
+
+        <div id="Pane3">
+            <img src="../homepage/tamu-days.png" id="ImageView1">
+        </div>
+
+        <div id="Pane4">
+            <div id="FontAwesomeIconView3" onclick="handleUsers()">CHEVRON_LEFT</div>
+            <div id="Label1" onclick="handleUsers()">Back</div>
+        </div>
+    </div>
+</body>
+</html>

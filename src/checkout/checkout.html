@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS Bold', sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        #AnchorPane {
+            position: relative;
+            height: 968px;
+            width: 1335px;
+            background-color: #F2F2F2;
+        }
+
+        #Pane1 {
+            position: absolute;
+            top: 155px;
+            left: -3px;
+            width: 258px;
+            height: 678px;
+            background-color: #93bdbb;
+            border-width: 10px;
+            border-color: #1e2b3c;
+        }
+
+        #VBox1 {
+            position: absolute;
+            top: 53px;
+            left: 15px;
+            width: 258px;
+            height: 670px;
+            spacing: 30px;
+        }
+
+        .jfx-button {
+            width: 254px;
+            height: 83px;
+            background-color: #c3e6e4;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #Pane2 {
+            position: absolute;
+            top: 740px;
+            left: 19px;
+            width: 254px;
+            height: 53px;
+        }
+
+        #FontAwesomeIconView1 {
+            fill: #1e2b3c;
+            size: 15px;
+            cursor: pointer;
+        }
+
+        #Label1 {
+            color: #1e2b3c;
+            font-size: 29px;
+            cursor: pointer;
+        }
+
+        #Pane3 {
+            position: absolute;
+            height: 175px;
+            width: 1400px;
+            top: 0;
+            left: 0;
+            background-color: #bababa;
+        }
+
+        #Logobtn {
+            position: absolute;
+            top: 8px;
+            left: 21px;
+            width: 339px;
+            height: 143px;
+            cursor: pointer;
+        }
+
+        #Rectangle1 {
+            arc-height: 5px;
+            arc-width: 5px;
+            fill: #707070;
+            height: 100px;
+            width: 413px;
+            position: absolute;
+            top: 111px;
+            left: 499px;
+            stroke: #1e2b3c;
+            stroke-width: 5px;
+        }
+
+        #Label2 {
+            position: absolute;
+            top: 106px;
+            left: 611px;
+            text-fill: white;
+            font-size: 57px;
+        }
+
+        #ImageView1 {
+            width: 59px;
+            height: 83px;
+            position: absolute;
+            top: 53px;
+            left: 1134px;
+        }
+
+        #VBox2 {
+            position: absolute;
+            top: 40px;
+            left: 1196px;
+            height: 96px;
+            width: 165px;
+        }
+
+        #Label3 {
+            font-size: 24px;
+            text-align: center;
+            color: white;
+        }
+
+        #Hyperlink1 {
+            text-fill: white;
+            text-decoration: underline;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        #Pane4 {
+            height: 175px;
+            width: 1400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #bababa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #Pane5 {
+            position: absolute;
+            top: 393px;
+            left: 577px;
+            width: 592px;
+            height: 349px;
+            border-width: 5px;
+            background-color: #fff;
+            border-color: #1e2b3c;
+        }
+
+        #GridPane1 {
+            position: absolute;
+            top: 62px;
+            left: 12px;
+            width: 568px;
+            height: 145px;
+            gap: 5px;
+        }
+
+        #Label4 {
+            font-size: 25px;
+        }
+
+        .text-field {
+            height: 42px;
+            width: 294px;
+            font-size: 20px;
+        }
+
+        .jfx-button-form {
+            width: 191px;
+            height: 55px;
+            background-color: #000000;
+            font-size: 21px;
+            text-fill: white;
+            cursor: pointer;
+        }
+
+        .jfx-button-clear {
+            width: 134px;
+            height: 55px;
+            background-color: #8D8D8D;
+            font-size: 21px;
+            text-fill: white;
+            cursor: pointer;
+        }
+
+        .drop-shadow {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="AnchorPane" class="drop-shadow">
+        <div id="Pane1">
+            <div id="VBox1">
+                <button class="jfx-button" onclick="checkoutBookings()">Check Out</button>
+                <button id="roombookingBTN1" class="jfx-button" onclick="bookRoom()">Room Booking</button>
+                <button id="cancelbookingBTN1" class="jfx-button" onclick="cancelBooking()">Cancel Booking</button>
+                <button id="roomBTN" class="jfx-button" onclick="viewRooms()">Rooms</button>
+                <button id="guestsBTN" class="jfx-button" onclick="viewGuests()">Guests</button>
+            </div>
+            <div id="Pane2">
+                <div id="FontAwesomeIconView1" onclick="mainPage()">CHEVRON_LEFT</div>
+                <div id="Label1" onclick="mainPage()">Back</div>
+            </div>
+        </div>
+
+        <div id="Pane3">
+            <div id="Logobtn" onclick="mainPage()">
+                <img src="../homepage/tamu-days.png" alt="Logo">
+            </div>
+            <div id="Rectangle1"></div>
+            <div id="Label2">Check out</div>
+            <img id="ImageView1" src="../img/user.png" alt="User Image">
+            <div id="VBox2">
+                <div id="Label3">Abdelrahman</div>
+                <a id="Hyperlink1" href="#" onclick="logout()">Log Out</a>
+            </div>
+        </div>
+
+        <div id="Pane4"></div>
+
+        <div id="Pane5">
+            <div id="GridPane1">
+                <label id="Label4">Room number</label>
+                <input type="text" id="roomNoField" class="text-field" placeholder="Room number" onkeydown="if(event.keyCode == 13) { checkoutAction(); return false; }">
+            </div>
+            <button id="CheckOutBTN" class="jfx-button-form" onclick="checkoutAction()">Check out</button>
+            <button id="clearbtn" class="jfx-button-clear" onclick="clearAction()">Clear</button>
+        </div>
+    </div>
+</body>
+</html>
