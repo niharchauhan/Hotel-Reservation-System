@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #bababa;
+            font-family: 'System Bold', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            margin: 0 auto;
+            width: 690px;
+            height: 620px;
+        }
+
+        .form-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 541px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            border: 1px solid #000;
+        }
+
+        .form-box button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #000000;
+            border: 3px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .icon {
+            position: absolute;
+            color: #fff;
+        }
+
+        .icon-user {
+            top: 335px;
+            left: 62px;
+            font-size: 45px;
+        }
+
+        .icon-key {
+            top: 417px;
+            left: 62px;
+            font-size: 35px;
+        }
+
+        .logo {
+            width: 600px;
+            margin: 25px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <input type="text" id="UserNameField" placeholder="Enter Username">
+            <input type="password" id="PasswordField" placeholder="Enter Password">
+            <button id="ButtonLogin" onclick="loginEvent()">LOGIN</button>
+        </div>
+        <i class="icon icon-user">USER</i>
+        <i class="icon icon-key">KEY</i>
+        <img src="../homepage/tamu-days.png" alt="Logo" class="logo">
+    </div>
+</body>
+</html>

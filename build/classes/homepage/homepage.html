@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color: #bababa;
+            font-family: 'Comic Sans MS Bold', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            margin: 0 auto;
+            width: 1400px;
+            height: 956px;
+        }
+
+        .side-panel {
+            position: absolute;
+            top: 174px;
+            left: 0;
+            width: 233px;
+            height: 781px;
+            background-color: #f0f0f0;
+            border: 2px solid #1e2b3c;
+        }
+
+        .user-info {
+            padding: 10px;
+            background-color: #93bdbb;
+            border: 3px solid #1e2b3c;
+            margin-bottom: 20px;
+        }
+
+        .progress-box {
+            padding: 10px;
+            background-color: #93bdbb;
+            border: 3px solid #1e2b3c;
+            margin-bottom: 20px;
+        }
+
+        .main-content {
+            position: absolute;
+            top: 213px;
+            left: 253px;
+            width: 1127px;
+            height: 737px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 50px;
+            grid-row-gap: 10px;
+            padding: 10px;
+        }
+
+        .footer {
+            position: absolute;
+            top: 781px;
+            left: 0;
+            width: 1400px;
+            height: 175px;
+            background-color: #bababa;
+        }
+
+        .logo {
+            position: absolute;
+            top: 8px;
+            left: 21px;
+            width: 348px;
+            height: 146px;
+        }
+
+        .title-box {
+            position: absolute;
+            top: 111px;
+            left: 499px;
+            width: 413px;
+            height: 100px;
+            background-color: #707070;
+            border: 5px solid #1e2b3c;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            font-family: 'Comic Sans MS Bold', sans-serif;
+            font-size: 57px;
+            color: white;
+        }
+
+        .settings-button {
+            position: absolute;
+            top: 46px;
+            left: 1132px;
+            width: 238px;
+            height: 82px;
+            background-color: transparent;
+            border: none;
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .settings-icon {
+            width: 77px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="side-panel">
+            <div class="user-info">
+                <label>Name:</label>
+                <label>Abdelrahman</label>
+                <label>Role:</label>
+                <label>Admin</label>
+            </div>
+            <div class="progress-box">
+                <progress max="100" value="78"></progress>
+                <label>Available Rooms</label>
+            </div>
+            <div class="progress-box">
+                <progress max="100" value="22"></progress>
+                <label>Reserved Rooms</label>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <button class="action-button" onclick="bookRoom()">Room Booking</button>
+            <button class="action-button" onclick="cancelBooking()">Cancel Booking</button>
+            <button class="action-button" onclick="checkoutBookings()">Check Out</button>
+            <button class="action-button" onclick="viewRooms()">Rooms</button>
+            <button class="action-button" onclick="viewGuests()">Guests</button>
+        </div>
+
+        <div class="footer"></div>
+
+        <div class="logo">
+            <img src="../homepage/tamu-days.png" alt="Logo">
+        </div>
+
+        <div class="title-box">
+            <div class="title">Home Page</div>
+        </div>
+
+        <button class="settings-button" onclick="goTo_Users()">
+            <img class="settings-icon" src="../img/settingsICON.png" alt="Settings">
+            Settings
+        </button>
+    </div>
+</body>
+</html>

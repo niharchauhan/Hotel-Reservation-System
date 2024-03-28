@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'System Bold', sans-serif;
+            background-color: #F2F2F2;
+        }
+
+        #AnchorPane {
+            position: relative;
+            height: 620px;
+            width: 690px;
+            background-color: #F2F2F2;
+        }
+
+        #VBox1 {
+            position: absolute;
+            top: 254px;
+            left: 95px;
+            width: 541px;
+            height: 159px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .jfx-text-field {
+            width: 540px;
+            height: 52px;
+            font-size: 18px;
+            color: #1e2b3c;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        #ButtonLogin {
+            position: absolute;
+            top: 484px;
+            left: 264px;
+            width: 163px;
+            height: 61px;
+            background-color: #000000;
+            border: 3px solid #fff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #FontAwesomeIconView1 {
+            fill: #1e2b3c;
+            position: absolute;
+            top: 356px;
+            left: 59px;
+            size: 45px;
+        }
+
+        #HBox1 {
+            position: absolute;
+            top: 393px;
+            left: 233px;
+            width: 222px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #Pane2 {
+            position: absolute;
+            top: 3px;
+            left: 5px;
+            width: 254px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+        }
+
+        #FontAwesomeIconView2 {
+            fill: white;
+            size: 10px;
+            cursor: pointer;
+        }
+
+        #Label1 {
+            color: white;
+            font-size: 23px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #Pane3 {
+            position: absolute;
+            height: 149px;
+            width: 691px;
+            top: 0;
+            left: -1px;
+            background-color: #bababa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #ImageView1 {
+            width: 312px;
+            height: 116px;
+            position: absolute;
+            top: 7px;
+            left: 288px;
+        }
+    </style>
+</head>
+<body>
+    <div id="AnchorPane">
+        <div id="VBox1">
+            <input type="text" id="UserNameField" class="jfx-text-field" placeholder="Enter username" onkeydown="if(event.keyCode == 13) { DeleteAction(); return false; }">
+        </div>
+        <button id="ButtonLogin" onclick="DeleteAction()">DELETE</button>
+        <div id="FontAwesomeIconView1">USER</div>
+        <div id="HBox1"></div>
+        <div id="Pane2">
+            <div id="FontAwesomeIconView2" onclick="handleUsers()">CHEVRON_LEFT</div>
+            <div id="Label1" onclick="handleUsers()">Back</div>
+        </div>
+    </div>
+    <div id="Pane3">
+        <img id="ImageView1" src="../homepage/tamu-days.png" alt="Logo">
+    </div>
+</body>
+</html>

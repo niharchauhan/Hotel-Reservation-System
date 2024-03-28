@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jfoenix@9.0.10/css/jfoenix-main.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jfoenix@9.0.10/css/jfoenix-design.css" />
+  <style>
+    #AnchorPane {
+      -fx-pref-height: 968.0;
+      -fx-pref-width: 1335.0;
+      -fx-background-color: #F2F2F2;
+    }
+
+    .pane-style {
+      -fx-layout-x: -3.0;
+      -fx-layout-y: 143.0;
+      -fx-background-color: #93bdbb;
+      -fx-border-width: 10;
+      -fx-border-color: #1e2b3c;
+      -fx-pref-height: 719.0;
+      -fx-pref-width: 258.0;
+    }
+
+    .vbox-style {
+      -fx-layout-x: 18.0;
+      -fx-layout-y: 74.0;
+      -fx-pref-height: 619.0;
+      -fx-pref-width: 258.0;
+      -fx-spacing: 20.0;
+    }
+
+    .button-style {
+      -fx-pref-height: 83.0;
+      -fx-pref-width: 254.0;
+      -fx-background-color: #c3e6e4;
+      -fx-text-alignment: center;
+      -fx-font: 30.0 System Bold;
+      -fx-cursor: hand;
+    }
+
+    .font-awesome-icon-view-style {
+      -fx-fill: #1e2b3c;
+      -fx-size: 15;
+      -fx-underline: true;
+      -fx-cursor: hand;
+    }
+
+    .label-style {
+      -fx-layout-x: 15.0;
+      -fx-layout-y: 17.0;
+      -fx-text-fill: #1e2b3c;
+      -fx-underline: true;
+      -fx-font-size: 29.0;
+      -fx-cursor: hand;
+    }
+
+    .pane-bottom {
+      -fx-pref-height: 175.0;
+      -fx-pref-width: 1400.0;
+      -fx-background-color: #bababa;
+    }
+
+    .button-logo-style {
+      -fx-layout-x: 21.0;
+      -fx-layout-y: 8.0;
+      -fx-pref-height: 143.0;
+      -fx-pref-width: 339.0;
+      -fx-cursor: hand;
+    }
+
+    .image-view-logo-style {
+      -fx-fit-height: 146.0;
+      -fx-fit-width: 348.0;
+      -fx-pick-on-bounds: true;
+      -fx-preserve-ratio: true;
+      -fx-cursor: hand;
+    }
+
+    .rectangle-style {
+      -fx-arc-height: 5.0;
+      -fx-arc-width: 5.0;
+      -fx-fill: #707070;
+      -fx-height: 100.0;
+      -fx-layout-x: 499.0;
+      -fx-layout-y: 111.0;
+      -fx-stroke: #1e2b3c;
+      -fx-stroke-type: outside;
+      -fx-stroke-width: 5.0;
+      -fx-width: 413.0;
+    }
+
+    .label-title-style {
+      -fx-layout-x: 621.0;
+      -fx-layout-y: 120.0;
+      -fx-text-fill: white;
+      -fx-text: Rooms;
+      -fx-text-alignment: center;
+      -fx-font: 60.0 Comic Sans MS Bold;
+    }
+
+    .image-view-user-style {
+      -fx-fit-height: 83.0;
+      -fx-fit-width: 59.0;
+      -fx-layout-x: 1134.0;
+      -fx-layout-y: 53.0;
+      -fx-pick-on-bounds: true;
+      -fx-preserve-ratio: true;
+    }
+
+    .vbox-user-style {
+      -fx-layout-x: 1196.0;
+      -fx-layout-y: 40.0;
+      -fx-pref-height: 96.0;
+      -fx-pref-width: 165.0;
+      -fx-alignment: center;
+    }
+
+    .label-username-style {
+      -fx-text-fill: white;
+      -fx-text: Abdelrahman;
+      -fx-text-alignment: center;
+      -fx-font: 24.0 Comic Sans MS Bold;
+    }
+
+    .hyperlink-logout-style {
+      -fx-text-fill: white;
+      -fx-text: Log Out;
+      -fx-underline: true;
+      -fx-font-size: 25.0;
+    }
+
+    .effect-drop-shadow {
+      -fx-radius: 5.0;
+      -fx-offset-x: 5.0;
+      -fx-offset-y: 5.0;
+      -fx-color: black;
+    }
+
+    .table-view-style {
+      -fx-layout-x: 309.0;
+      -fx-layout-y: 234.0;
+      -fx-pref-height: 708.0;
+      -fx-pref-width: 1077.0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="AnchorPane">
+    <div class="pane-style">
+      <div class="vbox-style">
+        <button class="button-style" onclick="checkoutBookings()">Check Out</button>
+        <button class="button-style" onclick="bookRoom()">Room Booking</button>
+        <button class="button-style" onclick="cancelBooking()">Cancel Booking</button>
+        <button class="button-style" onclick="viewRooms()">Rooms</button>
+        <button class="button-style" onclick="viewGuests()">Guests</button>
+      </div>
+      <div class="pane-bottom">
+        <button class="button-logo-style" onclick="mainPage()">
+          <img class="image-view-logo-style" src="../homepage/tamu-days.png" alt="Tamu Days" />
+        </button>
+        <div class="rectangle-style"></div>
+        <label class="label-title-style">Rooms</label>
+        <img class="image-view-user-style" src="../img/user.png" alt="User" />
+        <div class="vbox-user-style">
+          <label class="label-username-style">Abdelrahman</label>
+          <a class="hyperlink-logout-style" href="#" onclick="logout()">Log Out</a>
+        </div>
+      </div>
+    </div>
+    <table class="table-view-style" id="tabel2">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Room Type</th>
+          <th>Room Capacity</th>
+          <th>Check In Date</th>
+          <th>Check Out Date</th>
+          <th>Room Availability</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+</body>
+
+</html>

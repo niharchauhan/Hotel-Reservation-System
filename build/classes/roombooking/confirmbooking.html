@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #confirmation-container {
+            background-color: #F2F2F2;
+            position: relative;
+            height: 968px;
+            width: 1004px;
+            margin: 0 auto;
+        }
+
+        #header {
+            background-color: #bababa;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #confirmation-title {
+            font-family: 'Comic Sans MS Bold';
+            font-size: 57px;
+            color: white;
+        }
+
+        #logo-img {
+            cursor: pointer;
+            margin-top: 3px;
+        }
+
+        #customer-details {
+            border: 5px solid #1e2b3c;
+            background-color: #fff;
+            margin: 20px 23px;
+            padding: 20px;
+        }
+
+        #customer-data-label {
+            font-family: 'Comic Sans MS Bold';
+            font-size: 20px;
+            color: #1e2b3c;
+        }
+
+        .form-label {
+            font-family: 'System Bold';
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        .form-input {
+            font-size: 20px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        #credit-card-info {
+            border: 5px solid #1e2b3c;
+            background-color: #fff;
+            margin: 20px 23px;
+            padding: 20px;
+        }
+
+        #credit-card-label {
+            font-family: 'System Bold';
+            font-size: 19px;
+            color: #1e2b3c;
+        }
+
+        #credit-card-img {
+            width: 200px;
+            height: 150px;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        #reservation-details {
+            border: 5px solid #1e2b3c;
+            background-color: #fff;
+            margin: 20px 546px 20px 23px;
+            padding: 20px;
+        }
+
+        #reservation-data-label {
+            font-family: 'Comic Sans MS Bold';
+            font-size: 20px;
+            color: #1e2b3c;
+        }
+
+        #action-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .action-button {
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+            font-size: 21px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="confirmation-container">
+        <div id="header">
+            <label id="confirmation-title">Confirmation</label>
+            <img id="logo-img" src="../homepage/tamu-days.png" alt="Logo Image">
+        </div>
+
+        <div id="customer-details">
+            <label id="customer-data-label">Customer Data</label>
+            <div>
+                <label class="form-label">Name</label>
+                <input class="form-input" type="text" id="NameField" readonly placeholder="First and Last Name">
+            </div>
+            <div>
+                <label class="form-label">Phone</label>
+                <input class="form-input" type="text" id="PhoneField" readonly placeholder="Phone number">
+            </div>
+            <div>
+                <label class="form-label">Email</label>
+                <input class="form-input" type="text" id="EmailField" readonly placeholder="sample@anything.com">
+            </div>
+            <div>
+                <label class="form-label">Address</label>
+                <textarea class="form-input" id="AddressField" readonly placeholder="Enter your address"></textarea>
+            </div>
+            <div>
+                <label class="form-label">City</label>
+                <input class="form-input" type="text" id="CityField" readonly placeholder="Enter your city">
+            </div>
+            <div>
+                <label class="form-label">Nationality</label>
+                <input class="form-input" type="text" id="NationalityField" readonly placeholder="Enter your nationality">
+            </div>
+            <div>
+                <label class="form-label">Passport No.</label>
+                <input class="form-input" type="text" id="PassportField" readonly placeholder="Enter your passport number">
+            </div>
+        </div>
+
+        <div id="credit-card-info">
+            <label id="credit-card-label">Credit Card Information :</label>
+            <img id="credit-card-img" src="../img/credit-card.png" alt="Credit Card Image">
+            <div>
+                <label class="form-label">Card Number</label>
+                <input class="form-input" type="text" id="CardNumField" readonly placeholder="Card Number">
+            </div>
+            <div>
+                <label class="form-label">CVV code</label>
+                <input class="form-input" type="text" id="CVCcodeField" readonly placeholder="CVV code">
+            </div>
+        </div>
+
+        <div id="reservation-details">
+            <label id="reservation-data-label">Reservation Data</label>
+            <div>
+                <label class="form-label">Room Type :</label>
+                <label class="form-input">Economy</label>
+            </div>
+            <div>
+                <label class="form-label">Room Capacity :</label>
+                <label class="form-input">Single</label>
+            </div>
+            <div>
+                <label class="form-label">Check In :</label>
+                <label class="form-input">mm/dd/yyyy</label>
+            </div>
+            <div>
+                <label class="form-label">Check Out :</label>
+                <label class="form-input">mm/dd/yyyy</label>
+            </div>
+            <div>
+                <label class="form-label">Room ID :</label>
+                <input class="form-input" type="text" id="roomIDField" readonly>
+            </div>
+        </div>
+
+        <div id="action-buttons">
+            <button class="action-button" onclick="BookReservation()">Book</button>
+            <button class="action-button" onclick="cancelBookingAction()">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
